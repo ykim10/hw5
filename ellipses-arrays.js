@@ -10,6 +10,7 @@ x[2] = 300;
 y[2] = 200;
 d[2] = 30;
 
+
 function setup() {
   createCanvas(400, 400);
   colorMode(HSB)
@@ -20,11 +21,15 @@ function draw() {
   noStroke();
 
   // draw two ellipses
+  for (var i = 0; i < 100; i = i + 1) {
   fill(120, 60, 100);
   ellipse(x[1], y[1], d[1]);
   
   fill(240, 60, 100);
   ellipse(x[2], y[2], d[2]);
+
+x[i] = x[i] + xSpeed[i];
+y[i] = y[i] + ySpeed[i];
   
   // 1% of the time
   if (random() < 0.01) {
@@ -37,4 +42,6 @@ function draw() {
     // random diameter between 10 and 400
     d[2] = random(10, 400);
   }
+  }
 }
+  
