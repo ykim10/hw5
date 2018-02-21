@@ -76,7 +76,6 @@ function setup() {
 }
 
 function draw() {
-  background(255, 255, 255);
   textSize(45);
   text('Press A/S/D/F\n keys to Play\n\nClick Mouse to See How\nMy Brain Felt', width / 2, 100);
 
